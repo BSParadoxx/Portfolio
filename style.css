@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #1f2d2b;
+  background-color: #fafafa;
+}
+
+/* NAVBAR */
+.navbar {
+  padding: 25px 8%;
+  background-color: #f4f4f4;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 45px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #4e4c4c;
+  font-size: 0.95rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.navbar a:hover {
+  color: #1c7760; /* Green on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* ACTIVE STATE */
+.navbar a.active {
+  color: #1c7760; /* Green color when active */
+}
+
+.navbar a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #1c7760; /* Green line */
+  animation: slide 0.3s ease-in-out; /* Line animation */
+}
+
+/* Animation for the underline */
+@keyframes slide {
+  from {
+    width: 0;
+    left: 50%;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
+}
+
+
+/* HERO SECTION */
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;        /* centers image with text */
+  gap: 60px;                  /* space between text & image */
+  padding-left: 18%;
+  padding-right: 8%;
+  width:100%;
+ background: #ffffff;
+}
+
+/* LEFT TEXT */
+.hero-text {
+  max-width: 520px;
+}
+
+.subtitle {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #7a7a7a;
+}
+
+.hero-text h1 {
+  font-family: "Nunito", sans-serif;
+  font-size: 3.7rem;
+  margin: 10px 0;
+}
+
+.hero-text p {
+  
+  font-family: "Lora", serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* SOCIAL ICONS */
+.social-links {
+  display: flex;
+  gap: 18px;
+}
+
+.social-links a {
+  font-size: 1.1rem;
+  color: #1f2d2b;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #1c7760;
+  transform: translateY(-3px);
+}
+
+/* RIGHT IMAGE */
+.hero-image {
+  width: 280px;
+  height: 280px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(-40px);
+
+  /* Organic shape */
+  border-radius: 50%;
+
+  /* Depth */
+  box-shadow:
+    0 25px 40px rgba(0, 0, 0, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+
+  transition: border-radius 0.6s ease, transform 0.4s ease;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: center 2%;
+}
+
+.hero-image {
+  margin-left: auto;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+ 
+}
+
